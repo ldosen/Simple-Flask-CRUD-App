@@ -1,0 +1,18 @@
+{% extends "update_dept.html" %}
+
+			{% block dnumber %}
+            <div class="form-group">
+                {{ form.dnumber.label(class="form-control-label") }}
+                {% if form.dnumber.errors %}
+                    {{ form.dnumber(class="form-control form-control-lg is-invalid") }}
+                    <div class="invalid-feedback">
+                        {% for error in form.dnumber.errors %}
+                            <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    {{ form.dnumber(class="form-control form-control-lg") }}
+                {% endif %}
+            </div>
+			{% endblock dnumber %}
+			

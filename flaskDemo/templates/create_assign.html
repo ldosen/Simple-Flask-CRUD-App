@@ -1,0 +1,35 @@
+{% extends "update_assign.html" %}
+
+
+			{% block pno %}
+            <div class="form-group">
+                {{ form.pno.label(class="form-control-label") }}
+                {% if form.pno.errors %}
+                    {{ form.pno(class="form-control form-control-lg is-invalid") }}
+                    <div class="invalid-feedback">
+                        {% for error in form.pno.errors %}
+                            <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    {{ form.pno(class="form-control form-control-lg") }}
+                {% endif %}
+            </div>
+			{% endblock pno %}
+			{% block essn %}
+			<div class="form-group">
+                {{ form.essn.label(class="form-control-label") }}
+                {% if form.essn.errors %}
+                    {{ form.essn(class="form-control form-control-lg is-invalid") }}
+                    <div class="invalid-feedback">
+                        {% for error in form.essn.errors %}
+                            <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    {{ form.essn(class="form-control form-control-lg") }}
+                {% endif %}
+            </div>
+			{% endblock essn %}
+
+
